@@ -31,8 +31,10 @@
 		</ul>
 	</nav>
 
-	<section style="width: 600px; background-color: green; float: right;">
-		qqqqqqqq
+	<section>
+	<% unless user_signed_in? %>
+		<img src="/body.png">
+	<% end %>
 	</section>
 
 <%= yield %>
