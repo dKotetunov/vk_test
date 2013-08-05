@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vkontakte</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+		<ul class="top_links">
+			<li>
+				<% if user_signed_in? %>
+				<b><%= link_to "log out", destroy_user_session_path %></b>
+				<% else %>
+					<b><%= link_to "sign up", new_user_registration_path %></b>
+				<% end %>
+			</li>
+		</ul>
+	</header>
+
+	<nav class="left">
+		<ul class="menu">
+			<% if user_signed_in? %>
+				<li><a href="#">Profile</a></li>
+				<li><a href="#">Friends</a></li>
+				<li><a href="#">Photos</a></li>
+			<% else %>
+				<%= render 'devise/sessions/new' %>
+			<% end %>
+		</ul>
+	</nav>
+
+	<section style="width: 600px; background-color: green; float: right;">
+		qqqqqqqq
+	</section>
+
+<%= yield %>
+
+</body>
+</html>
