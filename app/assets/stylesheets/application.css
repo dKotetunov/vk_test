@@ -34,7 +34,7 @@ nav.left{
 	max-width: 140px;
 }
 
-nav.left input{
+input{
 	max-width: 120px;
 	border-radius: 0;
 	height: 20px;
@@ -73,5 +73,62 @@ section{
 	position: absolute;
 	left: 140px;
 	top: 40px;
-	border: 1px solid #3366CC;
+	border: 1px solid silver;
+}
+
+#header {
+  color: #607387;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 140%;
+  background-color: silver;
+}
+
+#header h1 {
+  font-size: 11px;
+  margin: 0;
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+.body{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.tabs {
+    opacity: 0;  /* Прозрачность */
+    visibility: hidden; /* Изначально - спрятан */
+}
+.tab{
+    position:absolute; /* Абсолютное позиционирование */
+    visibility: hidden;    /* Изначально - спрятан */
+    z-index: 10;    /* z-index */
+    color:#478CFB; /* Цвет */
+    font: bold 12pt "Trebuchet MS", tahoma, verdana, arial narrow, arial; /* Толщина, размер и семейство шрифта */
+}
+.tabs:target+.tab {
+    opacity: 1; /* Убирает прозрачность */
+    visibility: visible; /* Делает видимым */
+}
+.tabsLink a{
+    background-color:#478CFB; /* Цвет */
+    padding:5px; /* Внутренние отступы */
+    font: bold 12pt "Trebuchet MS", tahoma, verdana, arial narrow, arial; /* Толщина, размер и семейство шрифта */
+    color:#fff; /* Цвет */
+    text-decoration:none; /* Отсутствие нижней линии */
+    
+    /* Округление старт */
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* Округление конец */
+}
+
+#main{
+	padding-left: 15px;
+	padding-right: 15px;
 }

@@ -1,0 +1,34 @@
+<div class="tabsLink">
+  <a href="#tab1">School</a>
+  <a href="#tab2">College</a>
+  <a href="#tab3"> Complete sign-up </a>
+</div>
+        
+<br>
+<a class="tabs" id="tab1"></a>
+<div class="tab">
+Step 1. Select your high school <a align="center" href="#tab2">Skip step</a>
+<hr>
+<br><br><br><br>
+Let's try to find some of your friends who are already on VK.
+Start by selecting your school.
+<br><br>
+School country<br> <%= country_select("user", "country_name", [ "United Kingdom", "France", "Germany", "Ukraine" ]) %>  <%= select_tag(:pol, options_for_select(Country.named('United States').subregions)) %>
+
+
+<br>
+</div>
+
+<a class="tabs" id="tab2"></a>
+<div class="tab">
+Вкладка 2 
+<br>
+</div>
+
+
+<a class="tabs" id="tab3"></a>
+<div class="tab">
+Вкладка 3 
+<br>
+</div>
+

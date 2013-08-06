@@ -26,15 +26,17 @@
 				<li><a href="#">Friends</a></li>
 				<li><a href="#">Photos</a></li>
 			<% else %>
-				<%= render 'devise/sessions/new' %>
+
 			<% end %>
 		</ul>
 	</nav>
 
 	<section>
+	<div id="main">
 	<% unless user_signed_in? %>
-		<img src="/body.png">
+			<%= render 'layouts/registration' %>
 	<% end %>
+	</div>
 	</section>
 
 <%= yield %>

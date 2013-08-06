@@ -1,0 +1,23 @@
+<div id="header" style="">
+	<h1 id="title">Welcome!</h1>
+</div>
+<div class="body">
+	<p>VK is the largest European social network with more than a 100 million active users.</p> <br>
+	<h3>Sign up for VK</h3><hr><br>
+
+<%= form_for("user", :url => reg_path, remote: true) do |f| %>
+
+  <div><%= f.label :first_name %><br />
+  <%= f.text_field :name, :autofocus => true %></div>
+
+  <div><%= f.label :surname %><br />
+  <%= f.text_field :surname %></div>
+
+  <div> <%= select_tag(:pol, options_for_select(['Female','Male'])) %> </div>
+
+  <div><%= f.submit 'NEXT' %> </div>
+<% end %>
+
+	<h3>What can you do on VK?</h3><hr>
+	<%= image_tag "whatvk.png" %>
+</div>
