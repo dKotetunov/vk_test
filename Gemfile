@@ -25,6 +25,7 @@ gem 'devise'
 gem 'pry'
 gem 'country-select'
 gem 'carmen'
+gem 'carmen-rails'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
