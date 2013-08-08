@@ -9,7 +9,8 @@ class UserController < ApplicationController
 	end
 
 	def second_step
-		@reg = Carmen::Country.coded('US').subregions.map { |s| [s.name, s.code] }
+		@reg = Carmen::Country.coded("RU").subregions.map { |s| [s.name, s.code] }
+		@count = Carmen::Country.coded("RU").subregions.size 
 		user = User.new
 		user.name = params[:name]
 		user.surname = params[:surname]

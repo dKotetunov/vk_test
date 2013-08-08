@@ -4,6 +4,10 @@ module ApplicationHelper
 	end
 
 	def states(country)
-    @us_states = Carmen::Country.named(country).subregions.map { |s| [s.name, s.code] }
+    Carmen::Country.coded(country).subregions.map { |s| [s.name, s.code] }
+  end
+
+  def country
+    Carmen::Country.all.map { |s| [s.name, s.code] }
   end
 end
