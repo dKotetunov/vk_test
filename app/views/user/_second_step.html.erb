@@ -15,7 +15,7 @@ Step 1. Select your high school <a align="center" href="#tab2">Skip step</a>
 Let's try to find some of your friends who are already on VK.
 Start by selecting your school.
 <br><br>
-School country<br> <%= select_tag(:pol, options_for_select(country,:selected=>'UA'), {onchange: 'changeRegion()'})%>
+School country<br> <%= select_tag(:pol, options_for_select(country,:selected=>'UA'))%>
  <%= select_tag(:telephone, options_for_select(states('UA')))%>
 <br>
 </div>
@@ -33,24 +33,3 @@ School country<br> <%= select_tag(:pol, options_for_select(country,:selected=>'U
 <br>
 </div>
 
-<script>
-function changeRegion(){
-	var t = document.getElementById("telephone");
-	while (t.options.length > 0) {
-		t.remove(0);
-	}
-	for (var i=0; i<10; i++){
-	var option=document.createElement("option");
-	option.text="<%= @reg[i][0] %>";
-	try
-  {
-  	t.add(option,t.options[null]);
-  }
-	catch (e)
-  {
-  	t.add(option,null);
-  }
-}
-
-}
-</script>

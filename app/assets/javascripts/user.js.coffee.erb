@@ -1,0 +1,21 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+$ ->
+	$("body").on "change", "#pol", -> 
+		t = document.getElementById("telephone")
+		c = document.getElementById("pol")
+		count = <%= User.reg('IL').length %>
+		t.remove 0  while t.options.length if t.options.length?
+		i = 0
+		reg = <%= User.reg('IL') %>
+		$.ajax
+			url: 'http://0.0.0.0:3000/users/sign_in#tab1?reg=UA'
+		while i < count
+		  option = document.createElement("option") 
+		  option.text = (reg[i][0])
+		  try
+		    t.add option, t.options[null]
+		  catch e
+		    t.add option, null
+		  i++

@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
    attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :surname, :pol
+
+	def self.reg (country)
+		Carmen::Country.coded(country).subregions.map { |s| [s.name, s.code] }
+	end
 end
