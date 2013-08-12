@@ -5,7 +5,7 @@
 	<p>VK is the largest European social network with more than a 100 million active users.</p> <br>
 	<h3>Sign up for VK</h3><hr><br>
 
-<%= form_for("user", :url => reg_path, remote: true) do |f| %>
+<%= form_for("user", :url => reg_path(@user), remote: true) do |f| %>
 
   <div><%= f.label :first_name %><br />
   <%= f.text_field :name, :autofocus => true %></div>

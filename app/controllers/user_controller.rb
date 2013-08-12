@@ -9,16 +9,25 @@ class UserController < ApplicationController
 	end
 
 	def second_step
+		
 		@reg = Carmen::Country.coded("RU").subregions.map { |s| [s.name, s.code] }
 		@count = Carmen::Country.coded("RU").subregions.size 
-		user = User.new
-		user.name = params[:name]
-		user.surname = params[:surname]
-		user.pol = params[:pol]
-		#user.save(validate: false)
+		@user = User.new(params[:user])
+		@user.pol = params[:pol]
+		@user.email = Random.rand(1...10000)
+		@user.save(validate: false)
 		respond_to do |format|
 			format.js
     end
+	end
+
+	def next_step
+		@user = User.find(params[:id])
+		@user.country = params[:country]
+		@user.region = params[:region]
+		@user.update_attributes(params[:user])
+		@user.save(validate: false)
+		redirect_to root_path
 	end
 
 end

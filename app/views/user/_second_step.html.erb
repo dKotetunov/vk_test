@@ -5,8 +5,9 @@
   <a href="#tab2">College</a>
   <a href="#tab3"> Complete sign-up </a>
 </div>
-        
+       
 <br>
+<%= form_for("user", :url => reg1_path(@contry, id: @user.id)) do |f| %>
 <a class="tabs" id="tab1"></a>
 <div class="tab">
 Step 1. Select your high school <a align="center" href="#tab2">Skip step</a>
@@ -15,21 +16,31 @@ Step 1. Select your high school <a align="center" href="#tab2">Skip step</a>
 Let's try to find some of your friends who are already on VK.
 Start by selecting your school.
 <br><br>
-School country<br> <%= select_tag(:pol, options_for_select(country,:selected=>'UA'))%>
- <%= select_tag(:telephone, options_for_select(states('UA')))%>
+School country<br> <%= select_tag(:country, options_for_select(country,:selected=>'UA'))%>
+ <%= select_tag(:region, options_for_select(states('UA')))%>
+ <%= link_to 'Next', '#tab2' %>
 <br>
 </div>
 
 <a class="tabs" id="tab2"></a>
 <div class="tab">
-Вкладка 2 
+<a align="center" href="#tab3">Skip step</a>
 <br>
 </div>
 
 
 <a class="tabs" id="tab3"></a>
-<div class="tab">
-Вкладка 3 
+<div class="tab">	
+	Email: <br>
+	<%= f.email_field :email, value: nil %>
+	<br>
+	<div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
 <br>
+<%= f.submit 'ok' %>
 </div>
 
+<% end %>

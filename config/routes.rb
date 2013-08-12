@@ -4,6 +4,8 @@ Vkontakte::Application.routes.draw do
   post 'user/index'
   post 'user/second_step', as: "reg"
   get 'user/second_step', as: "reg"
+  get 'user/next_step', as: "reg1"
+  post 'user/next_step', as: "reg1"
   #post 'user/second_step'
   # The priority is based upon order of creation:
   # first created -> highest priority.
