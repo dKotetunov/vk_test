@@ -133,3 +133,34 @@ section{
 	padding-left: 15px;
 	padding-right: 15px;
 }
+
+img.avatar{
+	width: 200px;
+	height: 250px;
+}
+
+.line{
+	height: 20px;
+	width: 100%;
+	background-color: silver;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-left: -15px;
+	margin-bottom: 10px;
+}
+
+.leftmain{
+	width: 200px;
+	float: left;
+}
+
+.rightmain{
+	width: 397px;
+	float: right;
+}
+
+.linehead{
+	height: 20px;
+	width: 100%;
+	background-color: grey;
+}

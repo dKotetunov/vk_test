@@ -6,6 +6,9 @@ Vkontakte::Application.routes.draw do
   get 'user/second_step', as: "reg"
   get 'user/next_step', as: "reg1"
   post 'user/next_step', as: "reg1"
+  get 'user/online_update'
+  get 'user/users', as: 'users'
+  get  'user/:id' => 'user#show'
   #post 'user/second_step'
   # The priority is based upon order of creation:
   # first created -> highest priority.

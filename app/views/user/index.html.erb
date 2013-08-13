@@ -1,0 +1,22 @@
+<div class="line">
+	<%= current_user.full_name %>
+	<% if current_user.online %>
+		<font style="float: right;">online</font>
+	<% end %>
+</div>
+
+<div class="leftmain">
+	<img class="avatar" src="~/ava.jpg">
+	<%= link_to "Edit profile",  edit_user_registration_path %>
+	<hr>
+	<div>
+		<div class="linehead">
+			&nbsp&nbsp&nbspFriends
+		</div>
+	</div>
+</div>
+
+<div class="rightmain">
+ <%= current_user.full_name %><br>
+ status...  <hr>
+</div>

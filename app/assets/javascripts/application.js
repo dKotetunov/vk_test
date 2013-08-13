@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
+$( document ).on( 'click', 'a', function( ev ){
+	location.href = 'http://0.0.0.0:3000/user/online_update';
+});

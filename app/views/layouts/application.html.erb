@@ -11,6 +11,7 @@
 		<ul class="top_links">
 			<li>
 				<% if user_signed_in? %>
+				<%= link_to "Search", users_path %>
 				<b><%= link_to "log out", destroy_user_session_path %></b>
 				<% else %>
 					<b><%= link_to "sign up", new_user_registration_path %></b>
@@ -26,7 +27,7 @@
 				<li><a href="#">Friends</a></li>
 				<li><a href="#">Photos</a></li>
 			<% else %>
-
+				<%= render 'devise/sessions/new' %>
 			<% end %>
 		</ul>
 	</nav>
@@ -35,11 +36,13 @@
 	<div id="main">
 	<% unless user_signed_in? %>
 			<%= render 'layouts/registration' %>
+	<%else%> 
+		<%= yield %>
 	<% end %>
 	</div>
 	</section>
 
-<%= yield %>
+
 
 </body>
 </html>
