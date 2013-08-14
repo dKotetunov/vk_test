@@ -1,5 +1,7 @@
-<%= @users.each do |user| %>
+<% @users.each do |user| %>
 	<a href=<%= user.id %>><%= user.full_name %></a><br>
-	<%= user.online %> 
+	<% if user.online %>
+	online
+	<% end %> 
 	<hr>
 <% end %>

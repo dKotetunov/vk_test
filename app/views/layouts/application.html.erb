@@ -23,8 +23,8 @@
 	<nav class="left">
 		<ul class="menu">
 			<% if user_signed_in? %>
-				<li><a href="#">Profile</a></li>
-				<li><a href="#">Friends</a></li>
+				<li><%= link_to 'Profile', root_path%></li>
+				<li><%= link_to  'Friends', req_path  %> <%= friends_count %></a></li>
 				<li><a href="#">Photos</a></li>
 			<% else %>
 				<%= render 'devise/sessions/new' %>

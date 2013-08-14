@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user1_id: 1
+  user2_id_integer: MyString
+  type: false
+
+two:
+  user1_id: 1
+  user2_id_integer: MyString
+  type: false

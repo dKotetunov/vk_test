@@ -1,0 +1,22 @@
+<div class="line">
+	<%= @user.full_name %>
+	<% if @user.online %>
+		<font style="float: right;">online</font>
+	<% end %>
+</div>
+
+<div class="leftmain">
+	<img class="avatar" src="~/ava.jpg">
+	<%= link_to "Add to friends", add_friend_path(id: params[:id]) %>
+	<hr>
+	<div>
+		<div class="linehead">
+			&nbsp&nbsp&nbspFriends
+		</div>
+	</div>
+</div>
+
+<div class="rightmain">
+ <%= @user.full_name %><br>
+ status...  <hr>
+</div>

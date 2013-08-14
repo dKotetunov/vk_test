@@ -1,0 +1,6 @@
+<% @users.each do |user| %>
+<a href='http://0.0.0.0:3000/user/<%= user.id %>'><%= user.full_name %> <%= user.email %></a><br>
+	<% if user.online %>
+	online
+	<% end %> 
+<% end %>

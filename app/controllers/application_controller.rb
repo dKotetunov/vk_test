@@ -16,6 +16,16 @@ class ApplicationController < ActionController::Base
     @devise_mapping ||= Devise.mappings[:user]
   end
 
+  def friends_count
+    count = Information.where(user_id: current_user.id, type_inf: 'friend').count
+    if count > 0
+      count
+    end
+    
+  end
+
+  helper_method :friends_count
+
   private
 
   def after_sign_in_path_for(resource_or_scope)

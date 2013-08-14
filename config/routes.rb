@@ -9,6 +9,12 @@ Vkontakte::Application.routes.draw do
   get 'user/online_update'
   get 'user/users', as: 'users'
   get  'user/:id' => 'user#show'
+  get 'friends/request_to_friends', as: 'add_friend'
+  get 'friends/requests', as: 'req'
+  get 'friends/confirmation', as: 'confirmation'
+  get 'friends/delete', as: 'delete_confirmation'
+  get 'friends/index', as: 'friends'
+  
   #post 'user/second_step'
   # The priority is based upon order of creation:
   # first created -> highest priority.

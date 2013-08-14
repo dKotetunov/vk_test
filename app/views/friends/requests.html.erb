@@ -1,0 +1,5 @@
+<% @users.each do |fr| %>
+	<%= fr.email %> <hr>
+	<%= link_to 'Add', confirmation_path(id: fr.id), class: 'btn' %>
+	<%= link_to 'Not add', delete_confirmation_path, class: 'btn' %>
+<% end %>
