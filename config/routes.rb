@@ -14,6 +14,9 @@ Vkontakte::Application.routes.draw do
   get 'friends/confirmation', as: 'confirmation'
   get 'friends/delete', as: 'delete_confirmation'
   get 'friends/index', as: 'friends'
+  get 'message/new', as: 'new_mess'
+  get 'message/index'
+  post 'message/sen_mess', as: 'send_mess'
   
   #post 'user/second_step'
   # The priority is based upon order of creation:

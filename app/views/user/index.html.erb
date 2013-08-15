@@ -6,7 +6,7 @@
 </div>
 
 <div class="leftmain">
-	<img class="avatar" src="~/ava.jpg">
+	<%= image_tag current_user.avatar.url(:square) %>
 	<%= link_to "Edit profile",  edit_user_registration_path %>
 	<hr>
 	<div>

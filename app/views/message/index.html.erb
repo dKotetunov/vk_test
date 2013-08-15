@@ -1,0 +1,5 @@
+<% @mes.each do |m| %>
+	Sender: <%= Message.f_name(m.sender_id) %><br />
+	Recipient: <%= Message.f_name(m.recipient_id) %><br />
+	Body: <%= m.mess_body%><hr>
+<% end %>

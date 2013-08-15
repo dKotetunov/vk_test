@@ -6,8 +6,9 @@
 </div>
 
 <div class="leftmain">
-	<img class="avatar" src="~/ava.jpg">
+	<%= image_tag @user.avatar.url(:square) %>
 	<%= link_to "Add to friends", add_friend_path(id: params[:id]) %>
+	<%= link_to "New message", new_mess_path(id: params[:id]) %>
 	<hr>
 	<div>
 		<div class="linehead">
