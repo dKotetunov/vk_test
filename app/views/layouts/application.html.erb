@@ -26,6 +26,7 @@
 				<li><%= link_to 'Profile', root_path%></li>
 				<li><%= link_to  'Friends', req_path  %> <%= friends_count %></a></li>
 				<li><a href="#">Photos</a></li>
+				<li><%= link_to 'Messages', messages_path %><%= mess_count %></li>
 			<% else %>
 				<%= render 'devise/sessions/new' %>
 			<% end %>

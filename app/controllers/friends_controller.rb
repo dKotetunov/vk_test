@@ -44,4 +44,5 @@ class FriendsController < ApplicationController
 	def delete
 		
 	end
+
 end

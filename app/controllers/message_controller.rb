@@ -16,8 +16,18 @@ class MessageController < ApplicationController
 		mes.recipient_id = params[:recipient_id]
 		mes.mess_body = params[:message][:mess_body]
 		mes.save
-		#info = Information.new
+		info = Information.new
+		info.user_id = params[:recipient_id]
+		info.type_inf = 'mess'
+		info.save
+	end
 
+	def show
+		@mes = Message.find(params[:id])
+		inf = Information.where(user_id: params[:recipient_id], type_inf: 'mess').first
+		if inf.present?
+			inf.destroy
+		end
 	end
 
 end

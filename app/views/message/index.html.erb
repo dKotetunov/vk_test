@@ -1,5 +1,5 @@
 <% @mes.each do |m| %>
 	Sender: <%= Message.f_name(m.sender_id) %><br />
 	Recipient: <%= Message.f_name(m.recipient_id) %><br />
-	Body: <%= m.mess_body%><hr>
+	<%= link_to 'Body:'+ m.mess_body, mess_show_path(id: m.id, recipient_id: m.recipient_id) %><hr>
 <% end %>

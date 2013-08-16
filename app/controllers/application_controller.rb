@@ -21,10 +21,17 @@ class ApplicationController < ActionController::Base
     if count > 0
       count
     end
-    
   end
 
-  helper_method :friends_count
+
+  def mess_count
+    count = Information.where(user_id: current_user.id, type_inf: 'mess').count
+    if count > 0
+      count
+    end
+  end
+
+  helper_method :friends_count, :mess_count
 
   private
 

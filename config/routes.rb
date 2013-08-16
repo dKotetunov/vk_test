@@ -1,22 +1,33 @@
 Vkontakte::Application.routes.draw do
   devise_for :users
-  get 'user/index'
-  post 'user/index'
-  post 'user/second_step', as: "reg"
-  get 'user/second_step', as: "reg"
-  get 'user/next_step', as: "reg1"
-  post 'user/next_step', as: "reg1"
-  get 'user/online_update'
+  resources :users do
+    collection do
+      get 'index'
+      post 'index'
+      post 'user/second_step', as: "reg"
+      get 'second_step', as: "reg"
+      get 'next_step', as: "reg1"
+      post 'next_step', as: "reg1"
+      get 'online_update'
+    end
+  end
+
   get 'user/users', as: 'users'
-  get  'user/:id' => 'user#show'
+  get 'user/:id' => 'user#show'
+  
   get 'friends/request_to_friends', as: 'add_friend'
-  get 'friends/requests', as: 'req'
   get 'friends/confirmation', as: 'confirmation'
   get 'friends/delete', as: 'delete_confirmation'
+  get 'friends/requests', as: 'req'
   get 'friends/index', as: 'friends'
+
+
   get 'message/new', as: 'new_mess'
-  get 'message/index'
   post 'message/sen_mess', as: 'send_mess'
+  get 'message/show', as: 'mess_show'
+  get 'message/index', as: 'messages'
+  
+
   
   #post 'user/second_step'
   # The priority is based upon order of creation:
