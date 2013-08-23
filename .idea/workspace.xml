@@ -35,7 +35,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/bootstrap-formhelpers-timezones.codes.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/js/bootstrap-formhelpers-timezones.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/user.js.coffee" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vkontakte.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,19 +113,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="message.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/message.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="3" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+            <state line="9" column="76" selection-start="240" selection-end="240" vertical-scroll-proportion="0.15499426">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="58" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.5166475">
+            <state line="30" column="58" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -734,16 +733,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/message.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+        <state line="30" column="58" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/message.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="58" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.5166475">
+        <state line="9" column="76" selection-start="240" selection-end="240" vertical-scroll-proportion="0.15499426">
           <folding />
         </state>
       </provider>
