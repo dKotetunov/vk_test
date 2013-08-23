@@ -6,6 +6,6 @@ class Message < ActiveRecord::Base
 
 	def self.f_name(id)
 		User.find(id).full_name
-	end
-
+  end
+  
 end
