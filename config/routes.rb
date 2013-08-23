@@ -4,7 +4,6 @@ Vkontakte::Application.routes.draw do
     collection do
       get 'index'
       post 'index'
-      post 'user/second_step', as: "reg"
       get 'second_step', as: "reg"
       get 'next_step', as: "reg1"
       post 'next_step', as: "reg1"
@@ -12,6 +11,7 @@ Vkontakte::Application.routes.draw do
     end
   end
 
+  post 'user/second_step', as: "reg"
   get 'user/users', as: 'users'
   get 'user/:id' => 'user#show'
   
