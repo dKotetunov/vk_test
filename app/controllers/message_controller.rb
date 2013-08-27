@@ -24,7 +24,7 @@ class MessageController < ApplicationController
 
 	def show
 		@mes = Message.find(params[:id])
-		inf = Information.where(user_id: params[:recipient_id], type_inf: 'mess').first
+		inf = Information.add_new_mess(params[:recipient_id])
 		if inf.present?
 			inf.destroy
 		end

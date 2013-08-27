@@ -12,7 +12,7 @@ class FriendsController < ApplicationController
 	end
 
 	def confirmation
-		fr = Friends.where(user1_id: params[:id], user2_id_integer: current_user.id).first
+		fr = Friends.current_user_friend(params[:id])
 		fr.type_req = true
 		fr.save
 		Information.destroy_all(user_id: current_user.id, type_inf: 'friend')
@@ -20,7 +20,7 @@ class FriendsController < ApplicationController
 	end
 
 	def requests
-		@requests = Friends.where(user2_id_integer: current_user.id, type_req: false)
+		@requests = Friends.not_friend(current_user.id)
 		if @requests.present?
 			@requests.each do |r|
 				@users = User.where(id: r.user1_id)
@@ -31,7 +31,7 @@ class FriendsController < ApplicationController
 	end
 
 	def index
-		@requests = Friends.where((:user1_id == current_user.id && :type_req == true) | (:user2_id_integer == current_user && :type_req == true))
+		@requests = Friends.friends(current_user)
 		if @requests.present?
 			@requests.each do |r|
 				@users = User.where(id: r.user1_id)
