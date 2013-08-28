@@ -1,4 +1,7 @@
 Vkontakte::Application.routes.draw do
+  resources :mailers
+
+
   devise_for :users
   resources :users do
     collection do
@@ -26,6 +29,8 @@ Vkontakte::Application.routes.draw do
   post 'message/sen_mess', as: 'send_mess'
   get 'message/show', as: 'mess_show'
   get 'message/index', as: 'messages'
+
+  get 'user_mailer/sending', as: 'sending'
   
 
   

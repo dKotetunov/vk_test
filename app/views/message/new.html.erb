@@ -1,8 +1,7 @@
-<%= form_for("message", :url => send_mess_path(sender_id: current_user.id, recipient_id: params[:id])) do |f| %>
-	Sender: <%= Message.f_name(current_user.id)  %> <br>
-	Recipient: <%= Message.f_name(params[:id])  %> <br>
-	<%= f.label :Text_message %>
-	<%= f.text_area(:mess_body, size: '150x10') %>
-	<br>
-	<%= f.submit 'Send' %>
+<%= form_for("mail", :url => send_mess_path) do |f| %>
+	<%= f.label :sender %> <%= current_user.email %> <br>
+	<%= f.label :subject %> <%= f.text_field :subject %><br>
+	<%= f.label :Message_body %> <%= f.text_field :body %><br>
+	<%= f.label :Received %> <%= f.text_field :res %><br>
+	<%= f.submit "Send" %>
 <% end %>
